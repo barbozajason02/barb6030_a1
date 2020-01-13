@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Unknown.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="gBO-ZF-Y6g">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dragon-fruit-nutrition-facts.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gBO-ZF-Y6g">
                                 <rect key="frame" x="58" y="166" width="299" height="234"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -63,6 +63,7 @@
                     </view>
                     <connections>
                         <outlet property="dislike_label" destination="Qqf-xM-nqR" id="mkC-0R-adO"/>
+                        <outlet property="image_View" destination="gBO-ZF-Y6g" id="xLo-7z-KeY"/>
                         <outlet property="like_label" destination="jM5-9B-suy" id="4Mv-tv-a0n"/>
                     </connections>
                 </viewController>
@@ -72,7 +73,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Unknown.jpeg" width="294" height="171"/>
+        <image name="dragon-fruit-nutrition-facts.jpg" width="320" height="265"/>
         <image name="hand.thumbsdown" catalog="system" width="64" height="64"/>
         <image name="hand.thumbsup" catalog="system" width="64" height="64"/>
     </resources>
