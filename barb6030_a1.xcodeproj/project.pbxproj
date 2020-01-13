@@ -15,6 +15,10 @@
 		D74B2B6D23CCC5EF0099DE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74B2B6C23CCC5EF0099DE16 /* Assets.xcassets */; };
 		D74B2B7023CCC5EF0099DE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74B2B6E23CCC5EF0099DE16 /* LaunchScreen.storyboard */; };
 		D74B2B7B23CCC5EF0099DE16 /* barb6030_a1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B2B7A23CCC5EF0099DE16 /* barb6030_a1Tests.swift */; };
+		D74B2B8A23CCD04D0099DE16 /* dragon-fruit-nutrition-facts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D74B2B8623CCD04D0099DE16 /* dragon-fruit-nutrition-facts.jpg */; };
+		D74B2B8B23CCD04D0099DE16 /* Pomme-rouge-11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D74B2B8723CCD04D0099DE16 /* Pomme-rouge-11.jpg */; };
+		D74B2B8C23CCD04D0099DE16 /* Unknown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D74B2B8823CCD04D0099DE16 /* Unknown.jpeg */; };
+		D74B2B8D23CCD04D0099DE16 /* Melon_Lambkin_Hybrid_Christmas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D74B2B8923CCD04D0099DE16 /* Melon_Lambkin_Hybrid_Christmas.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		D74B2B7623CCC5EF0099DE16 /* barb6030_a1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barb6030_a1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74B2B7A23CCC5EF0099DE16 /* barb6030_a1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barb6030_a1Tests.swift; sourceTree = "<group>"; };
 		D74B2B7C23CCC5EF0099DE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D74B2B8623CCD04D0099DE16 /* dragon-fruit-nutrition-facts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dragon-fruit-nutrition-facts.jpg"; sourceTree = "<group>"; };
+		D74B2B8723CCD04D0099DE16 /* Pomme-rouge-11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pomme-rouge-11.jpg"; sourceTree = "<group>"; };
+		D74B2B8823CCD04D0099DE16 /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpeg; sourceTree = "<group>"; };
+		D74B2B8923CCD04D0099DE16 /* Melon_Lambkin_Hybrid_Christmas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Melon_Lambkin_Hybrid_Christmas.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 				D74B2B6423CCC5EE0099DE16 /* ViewController.swift */,
 				D74B2B6623CCC5EE0099DE16 /* Main.storyboard */,
 				D74B2B6C23CCC5EF0099DE16 /* Assets.xcassets */,
+				D74B2B8523CCD04D0099DE16 /* images */,
 				D74B2B6E23CCC5EF0099DE16 /* LaunchScreen.storyboard */,
 				D74B2B7123CCC5EF0099DE16 /* Info.plist */,
 				D74B2B6923CCC5EE0099DE16 /* barb6030_a1.xcdatamodeld */,
@@ -100,6 +109,18 @@
 				D74B2B7C23CCC5EF0099DE16 /* Info.plist */,
 			);
 			path = barb6030_a1Tests;
+			sourceTree = "<group>";
+		};
+		D74B2B8523CCD04D0099DE16 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D74B2B8623CCD04D0099DE16 /* dragon-fruit-nutrition-facts.jpg */,
+				D74B2B8723CCD04D0099DE16 /* Pomme-rouge-11.jpg */,
+				D74B2B8823CCD04D0099DE16 /* Unknown.jpeg */,
+				D74B2B8923CCD04D0099DE16 /* Melon_Lambkin_Hybrid_Christmas.jpg */,
+			);
+			name = images;
+			path = ../../images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +204,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74B2B8A23CCD04D0099DE16 /* dragon-fruit-nutrition-facts.jpg in Resources */,
 				D74B2B7023CCC5EF0099DE16 /* LaunchScreen.storyboard in Resources */,
+				D74B2B8C23CCD04D0099DE16 /* Unknown.jpeg in Resources */,
 				D74B2B6D23CCC5EF0099DE16 /* Assets.xcassets in Resources */,
 				D74B2B6823CCC5EE0099DE16 /* Main.storyboard in Resources */,
+				D74B2B8B23CCD04D0099DE16 /* Pomme-rouge-11.jpg in Resources */,
+				D74B2B8D23CCD04D0099DE16 /* Melon_Lambkin_Hybrid_Christmas.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
