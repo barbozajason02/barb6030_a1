@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D73139A123CF6A19006B8D13 /* health-benefits-of-apples-1296x728-feature.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D73139A023CF6A19006B8D13 /* health-benefits-of-apples-1296x728-feature.jpg */; };
 		D74B2B6123CCC5EE0099DE16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B2B6023CCC5EE0099DE16 /* AppDelegate.swift */; };
 		D74B2B6323CCC5EE0099DE16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B2B6223CCC5EE0099DE16 /* SceneDelegate.swift */; };
 		D74B2B6523CCC5EE0099DE16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B2B6423CCC5EE0099DE16 /* ViewController.swift */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D73139A023CF6A19006B8D13 /* health-benefits-of-apples-1296x728-feature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "health-benefits-of-apples-1296x728-feature.jpg"; sourceTree = "<group>"; };
+		D73139A223CF6A2C006B8D13 /* health-benefits-of-apples-1296x728-feature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "health-benefits-of-apples-1296x728-feature.jpg"; sourceTree = "<group>"; };
 		D74B2B5D23CCC5EE0099DE16 /* barb6030_a1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barb6030_a1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74B2B6023CCC5EE0099DE16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D74B2B6223CCC5EE0099DE16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,9 +96,10 @@
 				D74B2B6223CCC5EE0099DE16 /* SceneDelegate.swift */,
 				D74B2B6423CCC5EE0099DE16 /* ViewController.swift */,
 				D74B2B6623CCC5EE0099DE16 /* Main.storyboard */,
-				D74B2B6C23CCC5EF0099DE16 /* Assets.xcassets */,
-				D74B2B8523CCD04D0099DE16 /* images */,
 				D74B2B6E23CCC5EF0099DE16 /* LaunchScreen.storyboard */,
+				D74B2B6C23CCC5EF0099DE16 /* Assets.xcassets */,
+				D73139A023CF6A19006B8D13 /* health-benefits-of-apples-1296x728-feature.jpg */,
+				D74B2B8523CCD04D0099DE16 /* images */,
 				D74B2B7123CCC5EF0099DE16 /* Info.plist */,
 				D74B2B6923CCC5EE0099DE16 /* barb6030_a1.xcdatamodeld */,
 			);
@@ -114,6 +118,7 @@
 		D74B2B8523CCD04D0099DE16 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D73139A223CF6A2C006B8D13 /* health-benefits-of-apples-1296x728-feature.jpg */,
 				D74B2B8623CCD04D0099DE16 /* dragon-fruit-nutrition-facts.jpg */,
 				D74B2B8723CCD04D0099DE16 /* Pomme-rouge-11.jpg */,
 				D74B2B8823CCD04D0099DE16 /* Unknown.jpeg */,
@@ -209,6 +214,7 @@
 				D74B2B8C23CCD04D0099DE16 /* Unknown.jpeg in Resources */,
 				D74B2B6D23CCC5EF0099DE16 /* Assets.xcassets in Resources */,
 				D74B2B6823CCC5EE0099DE16 /* Main.storyboard in Resources */,
+				D73139A123CF6A19006B8D13 /* health-benefits-of-apples-1296x728-feature.jpg in Resources */,
 				D74B2B8B23CCD04D0099DE16 /* Pomme-rouge-11.jpg in Resources */,
 				D74B2B8D23CCD04D0099DE16 /* Melon_Lambkin_Hybrid_Christmas.jpg in Resources */,
 			);
