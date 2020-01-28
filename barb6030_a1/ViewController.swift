@@ -7,6 +7,7 @@
 //
 
 import UIKit
+/*
 var d_like_count = 0;
 var d_dislike_count = 0;
 var a_like_count = 0;
@@ -15,93 +16,55 @@ var m_like_count = 0;
 var m_dislike_count = 0;
 var mel_like_count = 0;
 var mel_dislike_count = 0;
-var loop = 1;
-
+var loop = 1;*/
+var like = 0;
+var dislike = 0;
+var fruitcount = 0;
+var currfruit = FruitCollection.collection[FruitCollection.current]
+let fruitdrag = Fruit(fruitName: "Dragon Fruit", fruitImageName: "dragon-fruit-nutrition-facts.jpg", disLikes: dislike, likes: like);
+let fruitapple = Fruit(fruitName: "Apple", fruitImageName: "Pomme-rouge-11.jpg",disLikes: dislike, likes: like);
+let fruitmango = Fruit(fruitName: "Mango", fruitImageName: "Unknown.jpeg",disLikes: dislike, likes: like);
+let fruitmelon = Fruit(fruitName: "Melon", fruitImageName: "Melon_Lambkin_Hybrid_Christmas.jpg",disLikes: dislike, likes: like);
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        FruitCollection(fruit: fruitdrag)
+        FruitCollection(fruit: fruitapple)
+        FruitCollection(fruit: fruitmango)
+        FruitCollection(fruit: fruitmelon)
     }
-
+    //FruitCollection.init(fruit: fruitcur) should pass in fruit
     @IBOutlet weak var like_label: UILabel!
     @IBOutlet weak var dislike_label: UILabel!
     @IBOutlet weak var image_View: UIImageView!
     
     @IBAction func likeButton(_ sender: UIButton) {
-        if loop == 1
-        {
-            d_like_count += 1
-            like_label.text = String(d_like_count)
-        }
-        if loop == 2
-        {
-            a_like_count += 1
-            like_label.text = String(a_like_count)
-        }
-        if loop == 3
-        {
-            m_like_count += 1
-            like_label.text = String(m_like_count)
-        }
-        if loop == 0
-        {
-            mel_like_count += 1
-            like_label.text = String(mel_like_count)
-        }
+        currfruit.likes = currfruit.likes + 1;
+        like_label.text = String(currfruit.likes)
+        
     }
     
     @IBAction func dislikeButton(_ sender: UIButton) {
-        if loop == 1
-        {
-            d_dislike_count += 1
-            dislike_label.text = String(d_dislike_count)
-        }
-        if loop == 2
-        {
-            a_dislike_count += 1
-            dislike_label.text = String(a_dislike_count)
-        }
-        if loop == 3
-        {
-            m_dislike_count += 1
-            dislike_label.text = String(m_dislike_count)
-        }
-        if loop == 0
-        {
-            mel_dislike_count += 1
-            dislike_label.text = String(mel_dislike_count)
-        }
+        currfruit.disLikes = currfruit.disLikes + 1;
+        dislike_label.text = String(currfruit.disLikes)
     }
     @IBAction func nextImageButton(_ sender: UIButton) {
-        loop += 1
-        if loop == 1
+        if (FruitCollection.current == 3)
         {
-            image_View.image = UIImage(named:"dragon-fruit-nutrition-facts.jpg")
-            like_label.text = String(d_like_count)
-            dislike_label.text = String(d_dislike_count)
+            FruitCollection.current = 0;
         }
-        if loop == 2
+        else
         {
-            image_View.image = UIImage(named:"Pomme-rouge-11.jpg")
-            like_label.text = String(a_like_count)
-            dislike_label.text = String(a_dislike_count)
+            FruitCollection.collection[FruitCollection.current] = currfruit
+            FruitCollection.current = FruitCollection.current + 1;
         }
-        if loop == 3
-        {
-            image_View.image = UIImage(named:"Unknown.jpeg")
-            like_label.text = String(m_like_count)
-            dislike_label.text = String(m_dislike_count)
-            
-        }
-        if loop == 4
-        {
-            image_View.image = UIImage(named:"Melon_Lambkin_Hybrid_Christmas.jpg")
-            like_label.text = String(mel_like_count)
-            dislike_label.text = String(mel_dislike_count)
-            loop = 0;
-        }
+        currfruit = FruitCollection.collection[FruitCollection.current]
+        like_label.text = String(currfruit.likes)
+        dislike_label.text = String(currfruit.disLikes)
+        image_View.image = UIImage(named: currfruit.fruitImageName)
     }
 }
 

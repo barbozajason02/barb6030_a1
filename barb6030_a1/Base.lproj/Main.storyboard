@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,21 +12,21 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="barb6030_a1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dragon-fruit-nutrition-facts" translatesAutoresizingMaskIntoConstraints="NO" id="gBO-ZF-Y6g">
-                                <rect key="frame" x="58" y="98" width="298" height="265"/>
+                                <rect key="frame" x="58" y="54" width="259" height="197.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AS-vo-iwg">
-                                <rect key="frame" x="95" y="425" width="75" height="56"/>
+                                <rect key="frame" x="95" y="313.5" width="75" height="40"/>
                                 <state key="normal" title="Button" image="hand.thumbsdown" catalog="system"/>
                                 <connections>
                                     <action selector="likeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viy-os-qd2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqf-xM-nqR" userLabel="lb_dislike">
-                                <rect key="frame" x="291" y="383" width="11" height="20"/>
+                                <rect key="frame" x="252" y="271.5" width="11" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="11" id="bfk-AZ-bSz"/>
                                     <constraint firstAttribute="height" constant="20" id="rAc-rA-1gX"/>
@@ -36,20 +36,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eci-ey-4oo">
-                                <rect key="frame" x="291" y="425" width="75" height="56"/>
+                                <rect key="frame" x="252" y="313.5" width="75" height="40"/>
                                 <state key="normal" title="Button" image="hand.thumbsup" catalog="system"/>
                                 <connections>
                                     <action selector="dislikeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jc9-Ps-6NY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jM5-9B-suy">
-                                <rect key="frame" x="95" y="383" width="10.666666666666671" height="20"/>
+                                <rect key="frame" x="95" y="271.5" width="10.5" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D07-Yz-WXN">
-                                <rect key="frame" x="191" y="587" width="32" height="30"/>
+                                <rect key="frame" x="171.5" y="459.5" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lrO-YX-Pyq"/>
