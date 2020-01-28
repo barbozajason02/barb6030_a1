@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             m_like_count += 1
             like_label.text = String(m_like_count)
         }
-        if loop == 4
+        if loop == 0
         {
             mel_like_count += 1
             like_label.text = String(mel_like_count)
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             m_dislike_count += 1
             dislike_label.text = String(m_dislike_count)
         }
-        if loop == 4
+        if loop == 0
         {
             mel_dislike_count += 1
             dislike_label.text = String(mel_dislike_count)
