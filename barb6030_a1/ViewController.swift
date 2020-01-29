@@ -7,16 +7,6 @@
 //
 
 import UIKit
-/*
-var d_like_count = 0;
-var d_dislike_count = 0;
-var a_like_count = 0;
-var a_dislike_count = 0;
-var m_like_count = 0;
-var m_dislike_count = 0;
-var mel_like_count = 0;
-var mel_dislike_count = 0;
-var loop = 1;*/
 var like = 0;
 var dislike = 0;
 var fruitcount = 0;
@@ -35,6 +25,13 @@ class ViewController: UIViewController {
         FruitCollection(fruit: fruitapple)
         FruitCollection(fruit: fruitmango)
         FruitCollection(fruit: fruitmelon)
+        if let i = UserDefaults.standard.integer(forKey: "currentIndex") as Int?
+            {
+                print("Fruits existed with index: \(i)")
+                FruitCollection.setCurrentIndex(to:i)//restore the fruit
+            }
+        currfruit = FruitCollection.currentFruit()
+        image_View.image = UIImage(named: currfruit.fruitImageName)
     }
     //FruitCollection.init(fruit: fruitcur) should pass in fruit
     @IBOutlet weak var like_label: UILabel!
