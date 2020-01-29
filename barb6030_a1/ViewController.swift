@@ -11,20 +11,24 @@ var like = 0;
 var dislike = 0;
 var fruitcount = 0;
 var currfruit = FruitCollection.collection[FruitCollection.current]
+var fruitc = FruitCollection();
+/*
 let fruitdrag = Fruit(fruitName: "Dragon Fruit", fruitImageName: "dragon-fruit-nutrition-facts.jpg", disLikes: dislike, likes: like);
 let fruitapple = Fruit(fruitName: "Apple", fruitImageName: "Pomme-rouge-11.jpg",disLikes: dislike, likes: like);
 let fruitmango = Fruit(fruitName: "Mango", fruitImageName: "Unknown.jpeg",disLikes: dislike, likes: like);
-let fruitmelon = Fruit(fruitName: "Melon", fruitImageName: "Melon_Lambkin_Hybrid_Christmas.jpg",disLikes: dislike, likes: like);
+let fruitmelon = Fruit(fruitName: "Melon", fruitImageName: "Melon_Lambkin_Hybrid_Christmas.jpg",disLikes: dislike, likes: like);*/
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fruitc = FruitCollection()
         // Do any additional setup after loading the view.
+        /*
         FruitCollection(fruit: fruitdrag)
         FruitCollection(fruit: fruitapple)
         FruitCollection(fruit: fruitmango)
-        FruitCollection(fruit: fruitmelon)
+        FruitCollection(fruit: fruitmelon)*/
         if let i = UserDefaults.standard.integer(forKey: "currentIndex") as Int?
             {
                 print("Fruits existed with index: \(i)")

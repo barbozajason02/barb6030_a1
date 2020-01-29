@@ -12,18 +12,20 @@ struct FruitCollection
 {
     static var collection = [Fruit]()//collection is an array of fruits
     static var current:Int = 0 //the current fruit in the collection (to be shown in the scene)
-    init(fruit: Fruit)
+    var likes = 0;
+    var dislikes = 0;
+   // init(fruit: Fruit)
+    init()
     {//init is automatically called when you make an instance of the FruitCollection
-        /*
-        let fruitdrag = Fruit(fruitName: "Dragon Fruit", fruitImageName: "dragon-fruit-nutrition-facts.jpg");
-        let fruitapple = Fruit(fruitName: "Apple", fruitImageName: "Pomme-rouge-11.jpg");
-        let fruitmango = Fruit(fruitName: "Mango", fruitImageName: "Unknown.jpeg");
-        let fruitmelon = Fruit(fruitName: "Melon", fruitImageName: "Melon_Lambkin_Hybrid_Christmas.jpg");
+        let fruitdrag = Fruit(fruitName: "Dragon Fruit", fruitImageName: "dragon-fruit-nutrition-facts.jpg", disLikes: dislikes, likes: likes);
         FruitCollection.collection.append(fruitdrag)
+        let fruitapple = Fruit(fruitName: "Apple", fruitImageName: "Pomme-rouge-11.jpg",disLikes: dislikes ,likes: likes);
         FruitCollection.collection.append(fruitapple)
+        let fruitmango = Fruit(fruitName: "Mango", fruitImageName: "Unknown.jpeg",disLikes: dislikes, likes: likes);
         FruitCollection.collection.append(fruitmango)
-        FruitCollection.collection.append(fruitmelon)*/
-        FruitCollection.collection.append(fruit)
+        let fruitmelon = Fruit(fruitName: "Melon", fruitImageName: "Melon_Lambkin_Hybrid_Christmas.jpg",disLikes: dislikes, likes: likes);
+        FruitCollection.collection.append(fruitmelon)
+        //FruitCollection.collection.append(fruit)
     }//init
     
     //return the current fruit
