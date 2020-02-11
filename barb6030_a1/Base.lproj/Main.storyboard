@@ -55,12 +55,22 @@
                                     <action selector="nextImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lrO-YX-Pyq"/>
                                 </connections>
                             </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bP-Ec-JCJ">
+                                <rect key="frame" x="0.0" y="910" width="83" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="ZBo-gU-Ov7"/>
+                                    <tabBarItem title="Add" image="plus-30-30" id="ftg-jV-kaa"/>
+                                    <tabBarItem title="Delete" image="minus-30-30" id="234-Xv-Hsg"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eci-ey-4oo" secondAttribute="trailing" symbolic="YES" id="1PG-Zy-Teb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gBO-ZF-Y6g" secondAttribute="trailing" constant="58" id="4Dv-Eu-18K"/>
                             <constraint firstItem="gBO-ZF-Y6g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Lv-Er-ghc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5bP-Ec-JCJ" secondAttribute="bottom" id="79G-Jd-00L"/>
                             <constraint firstItem="2AS-vo-iwg" firstAttribute="top" secondItem="jM5-9B-suy" secondAttribute="bottom" constant="22" id="7P0-dQ-LTu"/>
                             <constraint firstItem="2AS-vo-iwg" firstAttribute="firstBaseline" secondItem="eci-ey-4oo" secondAttribute="firstBaseline" id="8Gy-XH-ldV"/>
                             <constraint firstItem="eci-ey-4oo" firstAttribute="leading" secondItem="Qqf-xM-nqR" secondAttribute="leading" id="9Dj-bY-h1H"/>
@@ -68,8 +78,10 @@
                             <constraint firstItem="2AS-vo-iwg" firstAttribute="top" secondItem="eci-ey-4oo" secondAttribute="top" id="TRx-kX-Qs1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qqf-xM-nqR" secondAttribute="trailing" constant="112" id="TTc-WD-89v"/>
                             <constraint firstItem="Qqf-xM-nqR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jM5-9B-suy" secondAttribute="trailing" constant="8" symbolic="YES" id="Zu0-1x-lVu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5bP-Ec-JCJ" secondAttribute="trailing" id="aob-yO-Aju"/>
                             <constraint firstItem="eci-ey-4oo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2AS-vo-iwg" secondAttribute="trailing" constant="8" symbolic="YES" id="cp1-zw-oaz"/>
                             <constraint firstItem="Qqf-xM-nqR" firstAttribute="firstBaseline" secondItem="jM5-9B-suy" secondAttribute="firstBaseline" id="gVJ-Lx-Ox8"/>
+                            <constraint firstItem="5bP-Ec-JCJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iAz-4L-zWc"/>
                             <constraint firstItem="Qqf-xM-nqR" firstAttribute="centerY" secondItem="jM5-9B-suy" secondAttribute="centerY" id="iQI-a8-RLl"/>
                             <constraint firstItem="jM5-9B-suy" firstAttribute="top" secondItem="gBO-ZF-Y6g" secondAttribute="bottom" constant="20" id="j5k-4P-1Br"/>
                             <constraint firstItem="eci-ey-4oo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kFW-A7-Teb"/>
@@ -121,5 +133,7 @@
         <image name="dragon-fruit-nutrition-facts" width="320" height="265"/>
         <image name="hand.thumbsdown" catalog="system" width="64" height="64"/>
         <image name="hand.thumbsup" catalog="system" width="64" height="64"/>
+        <image name="minus-30-30" width="30" height="30"/>
+        <image name="plus-30-30" width="30" height="30"/>
     </resources>
 </document>

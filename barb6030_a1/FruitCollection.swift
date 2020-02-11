@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/*
 struct FruitCollection
 {
     static var collection = [Fruit]()//collection is an array of fruits
@@ -51,3 +51,34 @@ struct FruitCollection
     
     //other helper functions you may need when relaunching the app
 }
+*/
+import Foundation
+import UIKit
+
+class FruitCollection: NSObject, NSCoding {
+   var collection = [Fruit]() // a collection is an array of fruits
+   var current:Int = 0 // the current fruit in the collection shown in scene
+   
+    let collectionKey = "collectionKey"
+    let currentKey = "currentKey"
+   
+    // MARK: - NSCoding methods
+       override init(){
+           super.init()
+           setup()
+       }
+   
+       required convenience init?(coder decoder: NSCoder) {
+        self.init()
+        collection = (decoder.decodeObject(forKey: collectionKey) as? [Fruit])!
+        current = (decoder.decodeInteger(forKey: currentKey))
+       }
+   
+       func encode(with acoder: NSCoder) {
+           acoder.encode(collection, forKey: collectionKey)
+             acoder.encode(current, forKey: currentKey)
+       }
+}
+     // Mark: - Helpers
+    
+
