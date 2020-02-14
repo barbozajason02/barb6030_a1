@@ -7,6 +7,8 @@
 //
 
 import Foundation
+var likes = 0;
+var dislikes = 0;
 /*
 struct FruitCollection
 {
@@ -78,6 +80,14 @@ class FruitCollection: NSObject, NSCoding {
            acoder.encode(collection, forKey: collectionKey)
              acoder.encode(current, forKey: currentKey)
        }
+    
+    func setup()
+    {
+        self.collection.append(Fruit(fruitName: "Dragon Fruit", fruitImage: UIImage(named: "dragon-fruit-nutrition-facts.jpg")!, likes: 0, disLikes: 0)!)
+        self.collection.append(Fruit(fruitName: "Apple", fruitImage: UIImage(named: "Pomme-rouge-11.jpg")!, likes: 0, disLikes: 0)!)
+        self.collection.append(Fruit(fruitName: "Mango", fruitImage: UIImage(named: "Unknown.jpeg")!, likes: 0, disLikes: 0)!)
+        self.collection.append(Fruit(fruitName: "Melon", fruitImage: UIImage(named: "Melon_Lambkin_Hybrid_Christmas.jpg")!, likes: 0, disLikes: 0)!)
+    }
 }
      // Mark: - Helpers
     

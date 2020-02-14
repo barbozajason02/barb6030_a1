@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import UIKit
-import os.log
+
 
 /*struct Fruit
 {
@@ -64,14 +63,12 @@ class Fruit: NSObject, NSCoding {
     let likesDecoded = aDecoder.decodeInteger(forKey: PropertyKey.likes) as Int
     let disLikesDecoded = aDecoder.decodeInteger(forKey: PropertyKey.disLikes) as Int
     // Must call designated initializer.
-    self.init(fruitName: nameDecoded, fruitImage: imageDecoded , likes: likesDecoded , disLikes:
-    
-   disLikesDecoded)
+    self.init(fruitName: nameDecoded, fruitImage: imageDecoded , likes: likesDecoded , disLikes: disLikesDecoded)
     }
     init?(fruitName: String, fruitImage: UIImage, likes: Int, disLikes: Int) {
-    self.fruitName = fruitName
-    self.fruitImage = fruitImage
-    self.likes = likes
-    self.disLikes = disLikes
+        self.fruitName = fruitName
+        self.fruitImage = fruitImage
+        self.likes = likes
+        self.disLikes = disLikes
     } //init?
 }

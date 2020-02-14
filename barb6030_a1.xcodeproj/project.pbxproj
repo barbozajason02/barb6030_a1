@@ -18,8 +18,7 @@
 		D74B2B6D23CCC5EF0099DE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74B2B6C23CCC5EF0099DE16 /* Assets.xcassets */; };
 		D74B2B7023CCC5EF0099DE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74B2B6E23CCC5EF0099DE16 /* LaunchScreen.storyboard */; };
 		D74B2B7B23CCC5EF0099DE16 /* barb6030_a1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B2B7A23CCC5EF0099DE16 /* barb6030_a1Tests.swift */; };
-		D7B76DDE23F3521D002C7E34 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B76DDD23F3521D002C7E34 /* AddViewController.swift */; };
-		D7B76DE023F35241002C7E34 /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B76DDF23F35241002C7E34 /* DeleteViewController.swift */; };
+		D7B93B5023F5CFA400E32246 /* ShareFruitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B93B4F23F5CFA400E32246 /* ShareFruitCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +47,7 @@
 		D74B2B7623CCC5EF0099DE16 /* barb6030_a1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barb6030_a1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74B2B7A23CCC5EF0099DE16 /* barb6030_a1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barb6030_a1Tests.swift; sourceTree = "<group>"; };
 		D74B2B7C23CCC5EF0099DE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7B76DDD23F3521D002C7E34 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		D7B76DDF23F35241002C7E34 /* DeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
+		D7B93B4F23F5CFA400E32246 /* ShareFruitCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFruitCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +100,7 @@
 				D74B2B6923CCC5EE0099DE16 /* barb6030_a1.xcdatamodeld */,
 				D7073ED923E0C689002ED5F2 /* Fruit.swift */,
 				D7073EDB23E0C79A002ED5F2 /* FruitCollection.swift */,
-				D7B76DDD23F3521D002C7E34 /* AddViewController.swift */,
-				D7B76DDF23F35241002C7E34 /* DeleteViewController.swift */,
+				D7B93B4F23F5CFA400E32246 /* ShareFruitCollection.swift */,
 			);
 			path = barb6030_a1;
 			sourceTree = "<group>";
@@ -219,12 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B93B5023F5CFA400E32246 /* ShareFruitCollection.swift in Sources */,
 				D7073EDC23E0C79A002ED5F2 /* FruitCollection.swift in Sources */,
 				D7073EDA23E0C689002ED5F2 /* Fruit.swift in Sources */,
 				D74B2B6523CCC5EE0099DE16 /* ViewController.swift in Sources */,
-				D7B76DE023F35241002C7E34 /* DeleteViewController.swift in Sources */,
 				D74B2B6B23CCC5EE0099DE16 /* barb6030_a1.xcdatamodeld in Sources */,
-				D7B76DDE23F3521D002C7E34 /* AddViewController.swift in Sources */,
 				D74B2B6123CCC5EE0099DE16 /* AppDelegate.swift in Sources */,
 				D74B2B6323CCC5EE0099DE16 /* SceneDelegate.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qPe-hV-MBf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Favourities -->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="barb6030_a1" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,58 +19,47 @@
                                 <rect key="frame" x="58" y="54" width="259" height="197.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AS-vo-iwg">
-                                <rect key="frame" x="95" y="313.5" width="75" height="40"/>
+                                <rect key="frame" x="95" y="298" width="75" height="22"/>
                                 <state key="normal" title="Button" image="hand.thumbsdown" catalog="system"/>
                                 <connections>
                                     <action selector="likeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viy-os-qd2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqf-xM-nqR" userLabel="lb_dislike">
-                                <rect key="frame" x="252" y="271.5" width="11" height="20"/>
+                                <rect key="frame" x="252" y="271.5" width="11" height="4.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="11" id="bfk-AZ-bSz"/>
-                                    <constraint firstAttribute="height" constant="20" id="rAc-rA-1gX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eci-ey-4oo">
-                                <rect key="frame" x="252" y="313.5" width="75" height="40"/>
+                                <rect key="frame" x="252" y="298" width="75" height="22"/>
                                 <state key="normal" title="Button" image="hand.thumbsup" catalog="system"/>
                                 <connections>
                                     <action selector="dislikeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jc9-Ps-6NY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jM5-9B-suy">
-                                <rect key="frame" x="95" y="271.5" width="10.5" height="20"/>
+                                <rect key="frame" x="95" y="271.5" width="10.5" height="4.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D07-Yz-WXN">
-                                <rect key="frame" x="171.5" y="459.5" width="32" height="30"/>
+                                <rect key="frame" x="171.5" y="426" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lrO-YX-Pyq"/>
                                 </connections>
                             </button>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bP-Ec-JCJ">
-                                <rect key="frame" x="0.0" y="910" width="83" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="ZBo-gU-Ov7"/>
-                                    <tabBarItem title="Add" image="plus-30-30" id="ftg-jV-kaa"/>
-                                    <tabBarItem title="Delete" image="minus-30-30" id="234-Xv-Hsg"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eci-ey-4oo" secondAttribute="trailing" symbolic="YES" id="1PG-Zy-Teb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gBO-ZF-Y6g" secondAttribute="trailing" constant="58" id="4Dv-Eu-18K"/>
                             <constraint firstItem="gBO-ZF-Y6g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Lv-Er-ghc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5bP-Ec-JCJ" secondAttribute="bottom" id="79G-Jd-00L"/>
                             <constraint firstItem="2AS-vo-iwg" firstAttribute="top" secondItem="jM5-9B-suy" secondAttribute="bottom" constant="22" id="7P0-dQ-LTu"/>
                             <constraint firstItem="2AS-vo-iwg" firstAttribute="firstBaseline" secondItem="eci-ey-4oo" secondAttribute="firstBaseline" id="8Gy-XH-ldV"/>
                             <constraint firstItem="eci-ey-4oo" firstAttribute="leading" secondItem="Qqf-xM-nqR" secondAttribute="leading" id="9Dj-bY-h1H"/>
@@ -78,10 +67,8 @@
                             <constraint firstItem="2AS-vo-iwg" firstAttribute="top" secondItem="eci-ey-4oo" secondAttribute="top" id="TRx-kX-Qs1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qqf-xM-nqR" secondAttribute="trailing" constant="112" id="TTc-WD-89v"/>
                             <constraint firstItem="Qqf-xM-nqR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jM5-9B-suy" secondAttribute="trailing" constant="8" symbolic="YES" id="Zu0-1x-lVu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5bP-Ec-JCJ" secondAttribute="trailing" id="aob-yO-Aju"/>
                             <constraint firstItem="eci-ey-4oo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2AS-vo-iwg" secondAttribute="trailing" constant="8" symbolic="YES" id="cp1-zw-oaz"/>
                             <constraint firstItem="Qqf-xM-nqR" firstAttribute="firstBaseline" secondItem="jM5-9B-suy" secondAttribute="firstBaseline" id="gVJ-Lx-Ox8"/>
-                            <constraint firstItem="5bP-Ec-JCJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iAz-4L-zWc"/>
                             <constraint firstItem="Qqf-xM-nqR" firstAttribute="centerY" secondItem="jM5-9B-suy" secondAttribute="centerY" id="iQI-a8-RLl"/>
                             <constraint firstItem="jM5-9B-suy" firstAttribute="top" secondItem="gBO-ZF-Y6g" secondAttribute="bottom" constant="20" id="j5k-4P-1Br"/>
                             <constraint firstItem="eci-ey-4oo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kFW-A7-Teb"/>
@@ -118,6 +105,8 @@
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Favourities " image="star.fill" catalog="system" id="OrF-je-TdV"/>
+                    <navigationItem key="navigationItem" id="WxG-YO-bsa"/>
                     <connections>
                         <outlet property="dislike_label" destination="Qqf-xM-nqR" id="mkC-0R-adO"/>
                         <outlet property="image_View" destination="gBO-ZF-Y6g" id="xLo-7z-KeY"/>
@@ -126,7 +115,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="22" y="346"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kRY-Ac-gyX">
+            <objects>
+                <tabBarController id="qPe-hV-MBf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JoN-uL-Bvt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="mKe-yj-2nl"/>
+                        <segue destination="zfs-uU-RTh" kind="relationship" relationship="viewControllers" id="iNc-kM-EmD"/>
+                        <segue destination="AKs-at-NLk" kind="relationship" relationship="viewControllers" id="2LJ-Qd-8NW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAg-tX-KtQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="-519"/>
+        </scene>
+        <!--Add-->
+        <scene sceneID="jX5-uR-H3r">
+            <objects>
+                <viewController id="zfs-uU-RTh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eqe-so-8PU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7DS-k6-ENy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add" image="plus-30-30" id="M4s-xC-vAL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="04R-Lg-kNd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="346"/>
+        </scene>
+        <!--Delete-->
+        <scene sceneID="cr2-O6-qwN">
+            <objects>
+                <viewController id="AKs-at-NLk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RsM-ej-Du4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fTC-jd-Nu0"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Delete" image="minus-30-30" id="hjr-4i-RJj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nvI-bV-J9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="346"/>
         </scene>
     </scenes>
     <resources>
@@ -135,5 +175,6 @@
         <image name="hand.thumbsup" catalog="system" width="64" height="64"/>
         <image name="minus-30-30" width="30" height="30"/>
         <image name="plus-30-30" width="30" height="30"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
 </document>
