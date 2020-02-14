@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favourities -->
+        <!--Favorities -->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="barb6030_a1" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dragon-fruit-nutrition-facts" translatesAutoresizingMaskIntoConstraints="NO" id="gBO-ZF-Y6g">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBO-ZF-Y6g">
                                 <rect key="frame" x="58" y="54" width="259" height="197.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AS-vo-iwg">
@@ -105,7 +105,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favourities " image="star.fill" catalog="system" id="OrF-je-TdV"/>
+                    <tabBarItem key="tabBarItem" title="Favorities " image="star.fill" catalog="system" id="OrF-je-TdV"/>
                     <navigationItem key="navigationItem" id="WxG-YO-bsa"/>
                     <connections>
                         <outlet property="dislike_label" destination="Qqf-xM-nqR" id="mkC-0R-adO"/>
@@ -170,7 +170,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dragon-fruit-nutrition-facts" width="320" height="265"/>
         <image name="hand.thumbsdown" catalog="system" width="64" height="64"/>
         <image name="hand.thumbsup" catalog="system" width="64" height="64"/>
         <image name="minus-30-30" width="30" height="30"/>

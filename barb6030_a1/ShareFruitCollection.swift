@@ -8,7 +8,25 @@
 
 import Foundation
 
-class SharingFruitCollection {
+class SharingFruitCollection: NSObject, NSCoding {
+    
+    
+    let collectionKey = "collectionKey"
+    let currentKey = "currentKey"
+    
+    required convenience init?(coder decoder: NSCoder) {
+     self.init()
+        SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection = (decoder.decodeObject(forKey: collectionKey) as? [Fruit])!
+     current = (decoder.decodeInteger(forKey: currentKey))
+    }
+    
+    func encode(with acoder: NSCoder) {
+        acoder.encode( SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection , forKey: collectionKey)
+          acoder.encode(current, forKey: currentKey)
+    }
+    
+    
+    
     static let sharedFruitCollection = SharingFruitCollection()
     let fileName = "A3fruits.archive"
     private let rootKey = "rootKey"
@@ -25,6 +43,16 @@ class SharingFruitCollection {
         print("loadFruitCollection  ...starting")
         let filePath = self.dataFilePath()
         if (FileManager.default.fileExists(atPath: filePath)) {
+        let data = NSMutableData(contentsOfFile: filePath)!
+            if (filePath != "")
+            {
+                let unarchiver = NSKeyedUnarchiver(forReadingWith: data as Data)
+                SharingFruitCollection.sharedFruitCollection.fruitCollection =
+                unarchiver.decodeObject(forKey: rootKey) as? FruitCollection
+                unarchiver.finishDecoding()
+            }
+        }
+        /*if (FileManager.default.fileExists(atPath: filePath)) {
             let data = NSMutableData(contentsOfFile: filePath)!
             do{
                 let unarchiver = try NSKeyedUnarchiver(forReadingFrom: data as Data)
@@ -35,17 +63,21 @@ class SharingFruitCollection {
             {
                 print("didnt work bud")
             }
-        }
+        }*/
     }
         func saveFruitCollection(){
             let filePath = self.dataFilePath()
             print("saving the data")
             let data = NSMutableData()
-            //let archiver = NSKeyedArchiver(forWritingWith: data)
-            let archiver = NSKeyedArchiver(requiringSecureCoding:true)
-    archiver.encode(SharingFruitCollection.sharedFruitCollection.fruitCollection,
-    forKey: rootKey)
+            let archiver = NSKeyedArchiver(forWritingWith: data)
+            archiver.encode(SharingFruitCollection.sharedFruitCollection.fruitCollection,forKey: rootKey)
             archiver.finishEncoding()
             data.write(toFile: filePath, atomically: true)
+           /* let archiver = NSKeyedArchiver(requiringSecureCoding:false)
+            archiver.encode(SharingFruitCollection.sharedFruitCollection.fruitCollection,
+            forKey: rootKey)
+            archiver.finishEncoding()
+            data.write(toFile: filePath, atomically: true)
+            print(filePath)*/
     }
  } //Class

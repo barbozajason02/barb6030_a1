@@ -7,9 +7,6 @@
 //
 
 import UIKit
-var like = 0;
-var dislike = 0;
-var fruitcount = 0;
 var current = SharingFruitCollection.sharedFruitCollection.fruitCollection!.current
 var currfruit =  SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection[current]
 
@@ -20,13 +17,18 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         sharedFruitCollection =
         SharingFruitCollection.sharedFruitCollection.fruitCollection // if we forget thisline, the fruit collection is not the same collection of the sharing fruit collection!
-        //SharingFruitCollection.sharedFruitCollection.loadFruitCollection() // un-archive
+        SharingFruitCollection.sharedFruitCollection.loadFruitCollection() // un-archive
         }
        override func viewDidLoad() {
         super.viewDidLoad()
         _ = SharingFruitCollection()
         SharingFruitCollection.sharedFruitCollection.fruitCollection = FruitCollection()
-        //SharingFruitCollection.sharedFruitCollection.loadFruitCollection() // un-archive
+        SharingFruitCollection.sharedFruitCollection.loadFruitCollection() // un-archive
+        current = SharingFruitCollection.sharedFruitCollection.fruitCollection!.current
+        currfruit = (SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection[current])!
+        like_label.text = String(currfruit!.likes)
+        dislike_label.text = String(currfruit!.disLikes)
+        image_View.image = currfruit?.fruitImage
     }
     //FruitCollection.init(fruit: fruitcur) should pass in fruit
     @IBOutlet weak var like_label: UILabel!
@@ -38,7 +40,7 @@ class ViewController: UIViewController {
         currfruit = (SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection[current])! //fruitc.collection[current];
         currfruit!.likes = currfruit!.likes + 1
         like_label.text = String(currfruit!.likes)
-        
+        //SharingFruitCollection.sharedFruitCollection.saveFruitCollection()
     }
     
     @IBAction func dislikeButton(_ sender: UIButton) {
@@ -46,6 +48,7 @@ class ViewController: UIViewController {
         currfruit = (SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection[current])!
         currfruit!.disLikes = currfruit!.disLikes + 1;
         dislike_label.text = String(currfruit!.disLikes)
+        //SharingFruitCollection.sharedFruitCollection.saveFruitCollection()
     }
     @IBAction func nextImageButton(_ sender: UIButton) {
         current = SharingFruitCollection.sharedFruitCollection.fruitCollection!.current
