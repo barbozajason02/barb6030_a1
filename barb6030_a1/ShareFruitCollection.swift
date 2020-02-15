@@ -52,18 +52,6 @@ class SharingFruitCollection: NSObject, NSCoding {
                 unarchiver.finishDecoding()
             }
         }
-        /*if (FileManager.default.fileExists(atPath: filePath)) {
-            let data = NSMutableData(contentsOfFile: filePath)!
-            do{
-                let unarchiver = try NSKeyedUnarchiver(forReadingFrom: data as Data)
-                SharingFruitCollection.sharedFruitCollection.fruitCollection = unarchiver.decodeObject(forKey: rootKey) as? FruitCollection
-                unarchiver.finishDecoding()
-            }
-            catch
-            {
-                print("didnt work bud")
-            }
-        }*/
     }
         func saveFruitCollection(){
             let filePath = self.dataFilePath()
@@ -73,11 +61,5 @@ class SharingFruitCollection: NSObject, NSCoding {
             archiver.encode(SharingFruitCollection.sharedFruitCollection.fruitCollection,forKey: rootKey)
             archiver.finishEncoding()
             data.write(toFile: filePath, atomically: true)
-           /* let archiver = NSKeyedArchiver(requiringSecureCoding:false)
-            archiver.encode(SharingFruitCollection.sharedFruitCollection.fruitCollection,
-            forKey: rootKey)
-            archiver.finishEncoding()
-            data.write(toFile: filePath, atomically: true)
-            print(filePath)*/
     }
  } //Class

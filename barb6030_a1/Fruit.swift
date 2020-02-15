@@ -91,4 +91,7 @@ class Fruit: NSObject, NSCoding {
     func getImage() -> UIImage{
         return self.fruitImage
     }
+    func getName() -> String{
+        return self.fruitName
+    }
 }

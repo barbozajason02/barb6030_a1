@@ -7,53 +7,6 @@
 //
 
 import Foundation
-var likes = 0;
-var dislikes = 0;
-/*
-struct FruitCollection
-{
-    static var collection = [Fruit]()//collection is an array of fruits
-    static var current:Int = 0 //the current fruit in the collection (to be shown in the scene)
-    var likes = 0;
-    var dislikes = 0;
-   // init(fruit: Fruit)
-    init()
-    {//init is automatically called when you make an instance of the FruitCollection
-        let fruitdrag = Fruit(fruitName: "Dragon Fruit", fruitImageName: "dragon-fruit-nutrition-facts.jpg", disLikes: dislikes, likes: likes);
-        FruitCollection.collection.append(fruitdrag)
-        let fruitapple = Fruit(fruitName: "Apple", fruitImageName: "Pomme-rouge-11.jpg",disLikes: dislikes ,likes: likes);
-        FruitCollection.collection.append(fruitapple)
-        let fruitmango = Fruit(fruitName: "Mango", fruitImageName: "Unknown.jpeg",disLikes: dislikes, likes: likes);
-        FruitCollection.collection.append(fruitmango)
-        let fruitmelon = Fruit(fruitName: "Melon", fruitImageName: "Melon_Lambkin_Hybrid_Christmas.jpg",disLikes: dislikes, likes: likes);
-        FruitCollection.collection.append(fruitmelon)
-        //FruitCollection.collection.append(fruit)
-    }//init
-    
-    //return the current fruit
-    static func currentFruit() -> Fruit
-    {
-        let fruit = FruitCollection.collection[FruitCollection.current]
-        return fruit
-        
-    }
-    
-    //return the index of the current fruit
-    static func setCurrentIndex(to index: Int)
-    {
-        //you may need this function for relaunching the app
-        FruitCollection.current = index
-    }
-    
-    //return the index of the current fruit in the collection
-    static func getCurrentIndex() -> Int
-    {
-        return FruitCollection.current
-    }
-    
-    //other helper functions you may need when relaunching the app
-}
-*/
 import Foundation
 import UIKit
 
@@ -92,7 +45,7 @@ class FruitCollection: NSObject, NSCoding {
     func getFruit() -> Fruit{
         return collection[current]
     }
-    
+       
     func incrementIndex(){
         current += 1
     }
@@ -119,14 +72,13 @@ class FruitCollection: NSObject, NSCoding {
     
     func deleteCurrentFruit(currfruit: Fruit)->Fruit
     {
-        var count = 0;
         let fruit = currfruit;
         for item in collection {
-            if (item.fruitName == currfruit.fruitName)
+            if (item.getName() == currfruit.getName())
             {
-                collection.remove(at: count)
+                collection.remove(at: current)
             }
-            count = count + 1;
+            self.current = 0;
         }
         return fruit
     }

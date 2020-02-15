@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBO-ZF-Y6g">
-                                <rect key="frame" x="58" y="54" width="259" height="197.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gBO-ZF-Y6g">
+                                <rect key="frame" x="58" y="15" width="259" height="195.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AS-vo-iwg">
                                 <rect key="frame" x="95" y="313" width="75" height="23"/>
@@ -51,6 +51,13 @@
                                     <action selector="thumbsUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6hc-mr-cMo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga1-Zo-uIy">
+                                <rect key="frame" x="153" y="284" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -61,7 +68,7 @@
                             <constraint firstItem="QEO-wf-qfD" firstAttribute="bottom" secondItem="eci-ey-4oo" secondAttribute="bottom" constant="-46.5" id="AZt-SL-1z6"/>
                             <constraint firstItem="z5K-j9-ih8" firstAttribute="leading" secondItem="2AS-vo-iwg" secondAttribute="leading" id="Csx-Dl-qKo"/>
                             <constraint firstItem="z5K-j9-ih8" firstAttribute="baseline" secondItem="QEO-wf-qfD" secondAttribute="baseline" id="FB8-JF-HZQ"/>
-                            <constraint firstItem="z5K-j9-ih8" firstAttribute="top" secondItem="gBO-ZF-Y6g" secondAttribute="bottom" constant="16.5" id="FkE-Mp-AnF"/>
+                            <constraint firstItem="z5K-j9-ih8" firstAttribute="top" secondItem="gBO-ZF-Y6g" secondAttribute="bottom" constant="56.5" id="FkE-Mp-AnF"/>
                             <constraint firstItem="QEO-wf-qfD" firstAttribute="centerY" secondItem="z5K-j9-ih8" secondAttribute="centerY" id="G7Y-TN-ylC"/>
                             <constraint firstItem="QEO-wf-qfD" firstAttribute="leading" secondItem="eci-ey-4oo" secondAttribute="leading" id="JT3-EX-2CQ"/>
                             <constraint firstItem="2AS-vo-iwg" firstAttribute="top" secondItem="eci-ey-4oo" secondAttribute="top" constant="1" id="TRx-kX-Qs1"/>
@@ -73,7 +80,7 @@
                             </constraint>
                             <constraint firstItem="2AS-vo-iwg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="15.5" id="ndy-hT-Gaa"/>
                             <constraint firstItem="gBO-ZF-Y6g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="oAB-c0-zAg"/>
-                            <constraint firstItem="gBO-ZF-Y6g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="oPf-hi-8dl"/>
+                            <constraint firstItem="gBO-ZF-Y6g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="oPf-hi-8dl"/>
                             <constraint firstItem="2AS-vo-iwg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="oYI-dX-mgc"/>
                             <constraint firstItem="gBO-ZF-Y6g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qXU-KI-GYL"/>
                             <constraint firstItem="D07-Yz-WXN" firstAttribute="centerX" secondItem="gBO-ZF-Y6g" secondAttribute="centerX" id="rTv-0A-oJc"/>
@@ -106,6 +113,7 @@
                     <navigationItem key="navigationItem" id="WxG-YO-bsa"/>
                     <connections>
                         <outlet property="dislike_lb" destination="z5K-j9-ih8" id="m3c-ws-8xJ"/>
+                        <outlet property="fruit_name" destination="ga1-Zo-uIy" id="bvy-3e-qh0"/>
                         <outlet property="image_View" destination="gBO-ZF-Y6g" id="xLo-7z-KeY"/>
                         <outlet property="like_lb" destination="QEO-wf-qfD" id="2lP-ah-zp3"/>
                     </connections>
@@ -157,6 +165,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="if_returned:" destination="zfs-uU-RTh" eventType="primaryActionTriggered" id="Ifa-v6-BQ7"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMG-VZ-C76">
                                 <rect key="frame" x="151" y="465" width="63" height="30"/>
@@ -168,15 +179,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="7DS-k6-ENy"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="plus-30-30" id="M4s-xC-vAL"/>
                     <connections>
-                        <outlet property="field_name" destination="f04-Ky-fYu" id="fZG-eP-Ybw"/>
+                        <outlet property="field_name" destination="f04-Ky-fYu" id="Hzm-55-X3P"/>
                         <outlet property="image_view" destination="3ww-II-WBd" id="T5Y-Nc-nqC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04R-Lg-kNd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="C4n-Kk-Oh5">
+                    <connections>
+                        <action selector="ScreenTapped:" destination="zfs-uU-RTh" id="SBf-uu-FU2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="848.79999999999995" y="345.87706146926541"/>
         </scene>
@@ -189,7 +206,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDT-jm-vkJ">
-                                <rect key="frame" x="162" y="264" width="45" height="30"/>
+                                <rect key="frame" x="165" y="347" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Delete"/>
                                 <connections>
@@ -197,7 +214,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct7-vR-9i0">
-                                <rect key="frame" x="168" y="392" width="32" height="30"/>
+                                <rect key="frame" x="171" y="440" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -208,12 +225,27 @@
                                 <rect key="frame" x="64" y="50" width="246" height="187"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMk-dZ-dAm">
+                                <rect key="frame" x="162" y="274" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBS-Kn-ImT">
+                                <rect key="frame" x="154" y="282" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fTC-jd-Nu0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Delete" image="minus-30-30" id="hjr-4i-RJj"/>
                     <connections>
+                        <outlet property="fruit_name" destination="MBS-Kn-ImT" id="VEm-1P-ZzF"/>
                         <outlet property="image_view" destination="XPo-Cv-0eJ" id="iBW-tW-r3o"/>
                     </connections>
                 </viewController>
