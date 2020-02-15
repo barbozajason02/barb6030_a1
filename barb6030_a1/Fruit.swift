@@ -71,4 +71,24 @@ class Fruit: NSObject, NSCoding {
         self.likes = likes
         self.disLikes = disLikes
     } //init?
+    
+    func increaseLikes(){
+        self.likes += 1
+    }
+    
+    func increaseDisLikes(){
+        self.disLikes += 1
+    }
+    
+    func getLikes() -> String{
+        return String(self.likes)
+    }
+    
+    func getDisLikes() -> String{
+        return String(self.disLikes)
+    }
+    
+    func getImage() -> UIImage{
+        return self.fruitImage
+    }
 }

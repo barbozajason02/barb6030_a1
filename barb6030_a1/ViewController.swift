@@ -11,61 +11,55 @@ var current = SharingFruitCollection.sharedFruitCollection.fruitCollection!.curr
 var currfruit =  SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection[current]
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var image_View: UIImageView!
+    @IBOutlet weak var dislike_lb: UILabel!
+    @IBOutlet weak var like_lb: UILabel!
+    
     var sharedFruitCollection : FruitCollection? // this will be the unique FruitCollection we want to work with
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         sharedFruitCollection =
         SharingFruitCollection.sharedFruitCollection.fruitCollection // if we forget thisline, the fruit collection is not the same collection of the sharing fruit collection!
         SharingFruitCollection.sharedFruitCollection.loadFruitCollection() // un-archive
-        }
+            }
        override func viewDidLoad() {
         super.viewDidLoad()
         _ = SharingFruitCollection()
         SharingFruitCollection.sharedFruitCollection.fruitCollection = FruitCollection()
         SharingFruitCollection.sharedFruitCollection.loadFruitCollection() // un-archive
-        current = SharingFruitCollection.sharedFruitCollection.fruitCollection!.current
-        currfruit = (SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection[current])!
-        like_label.text = String(currfruit!.likes)
-        dislike_label.text = String(currfruit!.disLikes)
-        image_View.image = currfruit?.fruitImage
-    }
-    //FruitCollection.init(fruit: fruitcur) should pass in fruit
-    @IBOutlet weak var like_label: UILabel!
-    @IBOutlet weak var dislike_label: UILabel!
-    @IBOutlet weak var image_View: UIImageView!
-    
-    @IBAction func likeButton(_ sender: UIButton) {
-        current = SharingFruitCollection.sharedFruitCollection.fruitCollection!.current
-        currfruit = (SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection[current])! //fruitc.collection[current];
-        currfruit!.likes = currfruit!.likes + 1
-        like_label.text = String(currfruit!.likes)
-        //SharingFruitCollection.sharedFruitCollection.saveFruitCollection()
+        
+        image_View.image = currfruit?.getImage()
+        like_lb.text = currfruit?.getLikes()
+        dislike_lb.text = currfruit?.getDisLikes()
     }
     
-    @IBAction func dislikeButton(_ sender: UIButton) {
-        current = SharingFruitCollection.sharedFruitCollection.fruitCollection!.current
-        currfruit = (SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection[current])!
-        currfruit!.disLikes = currfruit!.disLikes + 1;
-        dislike_label.text = String(currfruit!.disLikes)
-        //SharingFruitCollection.sharedFruitCollection.saveFruitCollection()
-    }
     @IBAction func nextImageButton(_ sender: UIButton) {
-        current = SharingFruitCollection.sharedFruitCollection.fruitCollection!.current
-        currfruit = (SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection[current])!
-        if (current == ((SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection)!.count) - 1)
-        {
-            (SharingFruitCollection.sharedFruitCollection.fruitCollection!.current) = 0;
+        
+        SharingFruitCollection.sharedFruitCollection.fruitCollection!.incrementIndex()
+        let currIndex = SharingFruitCollection.sharedFruitCollection.fruitCollection!.currIndex()
+        
+        if(currIndex == SharingFruitCollection.sharedFruitCollection.fruitCollection!.getSize()){
+            SharingFruitCollection.sharedFruitCollection.fruitCollection!.resetIndex()
         }
-        else
-        {
-            (SharingFruitCollection.sharedFruitCollection.fruitCollection!.current) = (SharingFruitCollection.sharedFruitCollection.fruitCollection!.current) + 1;
-        }
-        current = SharingFruitCollection.sharedFruitCollection.fruitCollection!.current
-        currfruit = (SharingFruitCollection.sharedFruitCollection.fruitCollection?.collection[current])!
-        like_label.text = String(currfruit!.likes)
-        dislike_label.text = String(currfruit!.disLikes)
-        image_View.image = currfruit?.fruitImage
+        
+        currfruit = SharingFruitCollection.sharedFruitCollection.fruitCollection!.currrentFruit()
+        
+        image_View.image = currfruit?.getImage()
+        like_lb.text = currfruit?.getLikes()
+        dislike_lb.text = currfruit?.getDisLikes()
+    }
+    
+    @IBAction func thumbsUp(_ sender: Any) {
+        currfruit!.increaseLikes()
+        like_lb.text = currfruit?.getLikes()
+        //like_label.text = currfruit?.getLikes()
+    }
+    @IBAction func thumbsDown(_ sender: Any) {
+        currfruit!.increaseDisLikes()
+        dislike_lb.text = currfruit?.getDisLikes()
+        //dislike_label.text = currfruit!.getDisLikes()
     }
 }
 

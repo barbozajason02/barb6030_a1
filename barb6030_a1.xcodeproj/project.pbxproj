@@ -10,6 +10,8 @@
 		D7073EDA23E0C689002ED5F2 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7073ED923E0C689002ED5F2 /* Fruit.swift */; };
 		D7073EDC23E0C79A002ED5F2 /* FruitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7073EDB23E0C79A002ED5F2 /* FruitCollection.swift */; };
 		D73139A123CF6A19006B8D13 /* health-benefits-of-apples-1296x728-feature.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D73139A023CF6A19006B8D13 /* health-benefits-of-apples-1296x728-feature.jpg */; };
+		D7452FDB23F7A76300EE188D /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7452FDA23F7A76300EE188D /* AddViewController.swift */; };
+		D7452FDD23F7A8BA00EE188D /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7452FDC23F7A8BA00EE188D /* DeleteViewController.swift */; };
 		D74B2B6123CCC5EE0099DE16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B2B6023CCC5EE0099DE16 /* AppDelegate.swift */; };
 		D74B2B6323CCC5EE0099DE16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B2B6223CCC5EE0099DE16 /* SceneDelegate.swift */; };
 		D74B2B6523CCC5EE0099DE16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B2B6423CCC5EE0099DE16 /* ViewController.swift */; };
@@ -18,7 +20,6 @@
 		D74B2B6D23CCC5EF0099DE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74B2B6C23CCC5EF0099DE16 /* Assets.xcassets */; };
 		D74B2B7023CCC5EF0099DE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74B2B6E23CCC5EF0099DE16 /* LaunchScreen.storyboard */; };
 		D74B2B7B23CCC5EF0099DE16 /* barb6030_a1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B2B7A23CCC5EF0099DE16 /* barb6030_a1Tests.swift */; };
-		D75E602923F7233500730FCF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E602823F7233500730FCF /* AddViewController.swift */; };
 		D7B93B5023F5CFA400E32246 /* ShareFruitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B93B4F23F5CFA400E32246 /* ShareFruitCollection.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		D7073ED923E0C689002ED5F2 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		D7073EDB23E0C79A002ED5F2 /* FruitCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCollection.swift; sourceTree = "<group>"; };
 		D73139A023CF6A19006B8D13 /* health-benefits-of-apples-1296x728-feature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "health-benefits-of-apples-1296x728-feature.jpg"; sourceTree = "<group>"; };
+		D7452FDA23F7A76300EE188D /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		D7452FDC23F7A8BA00EE188D /* DeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
 		D74B2B5D23CCC5EE0099DE16 /* barb6030_a1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barb6030_a1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74B2B6023CCC5EE0099DE16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D74B2B6223CCC5EE0099DE16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +51,6 @@
 		D74B2B7623CCC5EF0099DE16 /* barb6030_a1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barb6030_a1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74B2B7A23CCC5EF0099DE16 /* barb6030_a1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barb6030_a1Tests.swift; sourceTree = "<group>"; };
 		D74B2B7C23CCC5EF0099DE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D75E602823F7233500730FCF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		D7B93B4F23F5CFA400E32246 /* ShareFruitCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFruitCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +105,8 @@
 				D7073ED923E0C689002ED5F2 /* Fruit.swift */,
 				D7073EDB23E0C79A002ED5F2 /* FruitCollection.swift */,
 				D7B93B4F23F5CFA400E32246 /* ShareFruitCollection.swift */,
-				D75E602823F7233500730FCF /* AddViewController.swift */,
+				D7452FDA23F7A76300EE188D /* AddViewController.swift */,
+				D7452FDC23F7A8BA00EE188D /* DeleteViewController.swift */,
 			);
 			path = barb6030_a1;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				TargetAttributes = {
 					D74B2B5C23CCC5EE0099DE16 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					D74B2B7523CCC5EF0099DE16 = {
 						CreatedOnToolsVersion = 11.3;
@@ -221,11 +225,12 @@
 			files = (
 				D7B93B5023F5CFA400E32246 /* ShareFruitCollection.swift in Sources */,
 				D7073EDC23E0C79A002ED5F2 /* FruitCollection.swift in Sources */,
-				D75E602923F7233500730FCF /* AddViewController.swift in Sources */,
+				D7452FDB23F7A76300EE188D /* AddViewController.swift in Sources */,
 				D7073EDA23E0C689002ED5F2 /* Fruit.swift in Sources */,
 				D74B2B6523CCC5EE0099DE16 /* ViewController.swift in Sources */,
 				D74B2B6B23CCC5EE0099DE16 /* barb6030_a1.xcdatamodeld in Sources */,
 				D74B2B6123CCC5EE0099DE16 /* AppDelegate.swift in Sources */,
+				D7452FDD23F7A8BA00EE188D /* DeleteViewController.swift in Sources */,
 				D74B2B6323CCC5EE0099DE16 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = barb6030_a1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -394,6 +400,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.wlu.barb6030-a1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -403,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = barb6030_a1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -88,6 +88,52 @@ class FruitCollection: NSObject, NSCoding {
         self.collection.append(Fruit(fruitName: "Mango", fruitImage: UIImage(named: "Unknown.jpeg")!, likes: 0, disLikes: 0)!)
         self.collection.append(Fruit(fruitName: "Melon", fruitImage: UIImage(named: "Melon_Lambkin_Hybrid_Christmas.jpg")!, likes: 0, disLikes: 0)!)
     }
+    
+    func getFruit() -> Fruit{
+        return collection[current]
+    }
+    
+    func incrementIndex(){
+        current += 1
+    }
+    
+    func decrementIndex(){
+        current -= 1 
+    }
+    
+    func currIndex() -> Int{
+        return current
+    }
+    
+    func resetIndex(){
+        current = 0
+    }
+    
+    func getSize() -> Int{
+        return collection.count
+    }
+    
+    func currrentFruit() -> Fruit{
+        return collection[current]
+    }
+    
+    func deleteCurrentFruit(currfruit: Fruit)->Fruit
+    {
+        var count = 0;
+        let fruit = currfruit;
+        for item in collection {
+            if (item.fruitName == currfruit.fruitName)
+            {
+                collection.remove(at: count)
+            }
+            count = count + 1;
+        }
+        return fruit
+    }
+    func addCurrentFruit(imageName: String,fruitImage: UIImage)
+       {
+        self.collection.append(Fruit(fruitName: imageName, fruitImage: fruitImage, likes: 0, disLikes: 0)!)
+       }
 }
      // Mark: - Helpers
     
